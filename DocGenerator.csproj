@@ -60,8 +60,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiAsset Remove="Resources\Raw\html_template.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Raw\html_template.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Handlebars.Net" Version="2.1.6" />
+		<PackageReference Include="Markdig" Version="0.41.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="Select.HtmlToPdf" Version="25.1.0" />
+		<PackageReference Include="Select.HtmlToPdf.NetCore" Version="25.1.0" />
+		<PackageReference Include="YamlDotNet" Version="16.3.0" />
 	</ItemGroup>
 
 </Project>

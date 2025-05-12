@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <style>
+        body.{{theme}} {
+            background: {{#if (eq theme "dark")}}#333{{else}}#fff{{/if}};
+            color: {{#if (eq theme "dark")}}#eee{{else}}#333{{/if}};
+        }
+        /* Стили для подсветки кода */
+        pre code {
+            display: block;
+            padding: 1em;
+            background: {{#if (eq theme "dark")}}#2d2d2d{{else}}#f5f5f5{{/if}};
+        }
+    </style>
+</head>
+<body class="{{theme}}">
+    <h1>Документация</h1>
+    <div class="metadata">
+        <p>Автор: {{author}}</p>
+        <p>Версия: {{version}}</p>
+    </div>
+    {{{content}}}
+</body>
+</html>
